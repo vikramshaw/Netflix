@@ -17,8 +17,8 @@ body {
     1. If the viewport width is less than 1200px, the background image will be 1200px wide
     2. If the viewport width is greater than 1200px, the background image will scale with the viewport width
     This ensures the background image is never smaller than 1200px while still being responsive for larger screens. */
-    background-size: max(1200px, 100vw);
-    height: 90vh;
+    background-size: max(1800px, 100vw);
+    height: 100vh;
     position: relative;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,6 +40,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin: auto;
     width: 80vw;
     z-index: 2;
@@ -54,6 +55,7 @@ nav .logo {
 .buttons {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .buttons .btn-trans {
@@ -120,16 +122,35 @@ nav .logo {
 
 .content .buttons .inp {
     padding: 15px 175px 15px 14px;
-    /* width: 380px; */
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1em;
     font-weight: 400;
 }
 
 .content .buttons .sub-btn {
     padding: 15px 30px 15px 14px;
-    /* width: 200px; */
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 1rem;
     font-weight: bold;
+}
+/* this code creates the colorful box at the bottom which is visible in forms of border*/
+.main .box {
+    height: 11vh;
+    overflow: hidden;
+    /* the background creates a colorful gradient of different shades */
+    background: linear-gradient(to right, black 0%, #873f4b 25%, red 50%, #b43248 75%, black 100%);
+    /* the clip-path creates an elliptical shape at the bottom with the above gradient */
+    clip-path: ellipse(65% 90% at bottom);
+    position: relative;
+    z-index: 1;
+    bottom: 20px;
+}
+/* this code creates the outer blue shadow effect in the form of elliptical shape */
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    clip-path: ellipse(62% 85% at bottom);
+    background: linear-gradient(to bottom, #0f197c, #000);
 }
