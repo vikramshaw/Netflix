@@ -8,6 +8,7 @@
 
 body {
     background-color: black;
+    font-family: "Martel Sans", sans-serif;
 }
 
 .main {
@@ -98,7 +99,6 @@ nav .logo {
 }
 
 .main .content> :nth-child(1) {
-    font-family: "Martel Sans", sans-serif;
     font-weight: 900;
     font-style: normal;
     font-size: 56px;
@@ -106,14 +106,12 @@ nav .logo {
 }
 
 .main .content> :nth-child(2) {
-    font-family: "Martel Sans", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 20px;
 }
 
 .main .content> :nth-child(3) {
-    font-family: "Martel Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -131,6 +129,7 @@ nav .logo {
     font-size: 1rem;
     font-weight: bold;
 }
+
 /* this code creates the colorful box at the bottom which is visible in forms of border*/
 .main .box {
     height: 11vh;
@@ -143,6 +142,7 @@ nav .logo {
     z-index: 1;
     bottom: 20px;
 }
+
 /* this code creates the outer blue shadow effect in the form of elliptical shape */
 .box::before {
     content: "";
@@ -153,4 +153,122 @@ nav .logo {
     bottom: 0px;
     clip-path: ellipse(62% 85% at bottom);
     background: linear-gradient(to bottom, #0f197c, #000);
+}
+
+.section {
+    width: 80vw;
+    margin: auto;
+}
+
+.section> :first-child {
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+
+}
+
+.section .sec-img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.sec-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.section .sec-content {
+    color: white;
+    padding: 32px 20px;
+}
+
+.sec-content .sec-flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 0px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.sec-flex .flex {
+    width: 230px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    background: linear-gradient(to bottom, #192247 0%, #23131b 100%);
+}
+
+.sec-flex .flex :nth-child(1) {
+    padding-bottom: 20px;
+    font-size: 24px;
+    line-height: 35px;
+}
+
+.sec-flex .flex :nth-child(2) {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.sec-flex .flex :last-child {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.faq {
+    color: white;
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+}
+
+/* .faq .faq-item :nth-child(1) {
+    margin: 12px;
+    width: 100%;
+    background-color: #181818;
+    padding: 25px;
+} */
+.faq .faq-item {
+    display: flex;
+    margin: 12px;
+    width: 100%;
+    background-color: #312e2e;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.faq .faq-item:hover{
+ background-color: #4b4949;  
+}
+
+.third-btn {
+    color: white;
+    justify-content: center;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    gap: 10px;
+}
+
+.third-btn p {
+    padding: 20px 80px 20px 20px;
+}
+
+.third-btn .input-btn {
+    padding: 20px 300px 20px 20px;
+}
+
+.third-btn .submit-btn {
+    padding: 10px 30px 16px 10px;
+    font-weight: bolder;
+    font-size: 24px;
 }
